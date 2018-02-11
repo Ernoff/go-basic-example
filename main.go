@@ -4,11 +4,13 @@ import (
 	"github.com/mmcdole/gofeed"
 	"io"
 	"net/http"
+	"fmt"
 )
 
-func main() {
-	http.HandleFunc("/", display)
 
+func main() {
+	fmt.Println("Server starting.....")
+	http.HandleFunc("/", display)
 	http.ListenAndServe(":1337", nil)
 }
 
